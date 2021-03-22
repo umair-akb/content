@@ -16,6 +16,7 @@
     "NIST",
     "GenericWebhook",
     "GraphQL",
-    "GenericSQL"
-  ]    
+    "GenericSQL",
+    "AbuseDB"
+  ]
 }
