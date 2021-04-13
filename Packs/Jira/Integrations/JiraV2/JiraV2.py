@@ -468,6 +468,12 @@ def get_issue_fields(issue_creating=False, mirroring=False, **issue_args):
         except TypeError as te:
             demisto.debug(str(te))
             return_error("issueJson must be in a valid json format")
+    elif 'issueJson' in issue_args:
+        try:
+            issue = json.loads(issue_args['issueJson'])
+        except TypeError as te:
+            demisto.debug(str(te))
+            return_error("issueJson must be in a valid json format")
 
     if not issue.get('fields'):
         issue['fields'] = {}
@@ -541,10 +547,15 @@ def get_issue_fields(issue_creating=False, mirroring=False, **issue_args):
             issue['fields']['assignee'] = {}
         issue['fields']['assignee']['accountId'] = issue_args['assignee_id']
 
+    if issue_args.get('reporter_id'):
+        if not issue['fields'].get('reporter'):
+            issue['fields']['reporter'] = {}
+        issue['fields']['reporter']['accountId'] = issue_args['reporter_id']
+
     if issue_args.get('reporter'):
         if not issue['fields'].get('reporter'):
             issue['fields']['reporter'] = {}
-        issue['fields']['reporter']['accountId'] = issue_args['reporter']
+        issue['fields']['reporter']['name'] = issue_args['reporter']
 
     return issue
 
