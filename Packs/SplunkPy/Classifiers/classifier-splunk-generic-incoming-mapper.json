@@ -24,36 +24,62 @@
 					"complex": null,
 					"simple": "owner"
 				},
-				"Alert Status": {
+				"Notable Status": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "status",
+						"transformers": [
+							{
+								"args": {
+									"input_values": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "1,2,3,4,5"
+										}
+									},
+									"mapped_values": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "New, In Progress, Pending, Resolved, Closed"
+										}
+									}
+								},
+								"operator": "MapValuesTransformer"
+							}
+						]
+					},
+					"simple": ""
+				},
+				"Usernames": {
 					"complex": null,
-					"simple": "status"
+					"simple": "user"
+				},
+				"Events": {
+					"complex": null,
+					"simple": "Drilldown"
                 },
-                "severity": {
-                    "complex": {
-                        "accessor": "",
-                        "filters": [],
-                        "root": "urgency",
-                        "transformers": [
-                            {
-                                "args": {
-                                    "input_values": {
-                                        "isContext": false,
-                                        "value": {
-                                            "complex": null,
-                                            "simple": "0,1,2,3,4"
-                                        }
-                                    },
-                                    "mapped_values": {
-                                        "isContext": false,
-                                        "value": {
-                                            "complex": null,
-                                            "simple": "0,1,2,3,4"
-                                        }
-                                    }
-                                },
-                                "operator": "MapValuesTransformer"
-                            }
-                        ]
+				"Asset Table": {
+					"complex": null,
+					"simple": "Asset"
+                },
+				"Identity Table": {
+					"complex": null,
+					"simple": "Identity"
+                },
+				"Source IPs": {
+					"complex": null,
+					"simple": "src_ip"
+                },
+				"Destination IPs": {
+					"complex": null,
+					"simple": "dest_ip"
+                },
+				"severity": {
+					"complex": null,
+					"simple": "urgency"
                     },
 				"dbotMirrorDirection": {
 					"complex": null,

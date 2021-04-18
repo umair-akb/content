@@ -14,27 +14,37 @@
     "useCases": [],
     "keywords": [],
     "dependencies": {
-        "CommonScripts": {
-            "mandatory": true,
-            "display_name": "Common Scripts"
-        },
-        "Malware": {
-            "mandatory": true,
-            "display_name": "Malware"
-        },
         "CommonTypes": {
             "mandatory": true,
             "display_name": "Common Types"
         },
         "AccessInvestigation": {
-            "mandatory": true,
+            "mandatory": false,
             "display_name": "Access Investigation"
+        },
+        "Malware": {
+            "mandatory": false,
+            "display_name": "Malware"
+        },
+        "CommonScripts": {
+            "mandatory": true,
+            "display_name": "Common Scripts"
+        },
+        "Asset": {
+            "mandatory": false,
+            "display_name": "Asset"
+        },
+        "Identity": {
+            "mandatory": false,
+            "display_name": "Identity"
         }
     },
     "displayedImages": [
-        "CommonScripts",
-        "Malware",
         "CommonTypes",
-        "AccessInvestigation"
+        "AccessInvestigation",
+        "Malware",
+        "CommonScripts",
+        "Asset",
+        "Identity"
     ]
 }

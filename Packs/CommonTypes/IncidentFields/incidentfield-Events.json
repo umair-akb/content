@@ -1,7 +1,8 @@
 {
     "associatedToAll": false,
     "associatedTypes": [
-        "Qradar Generic"
+        "Qradar Generic",
+        "Splunk Generic"
     ],
     "breachScript": "",
     "caseInsensitive": true,
@@ -36,7 +37,10 @@
     ],
     "sla": 0,
     "system": false,
-    "systemAssociatedTypes": null,
+    "systemAssociatedTypes": [
+        "Qradar Generic",
+        "Splunk Generic"
+    ],
     "threshold": 72,
     "toServerVersion": "",
     "type": "multiSelect",
