@@ -31,11 +31,11 @@
             "display_name": "Common Scripts"
         },
         "Asset": {
-            "mandatory": false,
+            "mandatory": true,
             "display_name": "Asset"
         },
         "Identity": {
-            "mandatory": false,
+            "mandatory": true,
             "display_name": "Identity"
         }
     },
